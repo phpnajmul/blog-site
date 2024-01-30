@@ -39,14 +39,16 @@
 
 `composer update`  
 
+`php artisan key:generate`  
+
 `npm install`  
 
 `npm run dev`  
 
 `php artisan serve`  
 
-## Then finished setup & Start Your Project ##  
+<p>Then finished setup & Start Your Project</p>
 
-# Thanks for reading my installation project #
+<p>Thanks for reading my installation project</p>  
 
 
