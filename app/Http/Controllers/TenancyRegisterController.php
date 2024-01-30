@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreTenancyRegister;
+use App\Models\News;
 use App\Models\Tenant;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Stancl\Tenancy\Database\Models\Domain;
 
 class TenancyRegisterController extends Controller
 {
@@ -18,8 +20,13 @@ class TenancyRegisterController extends Controller
 //        dd($request->all());
         $tenant->createDomain(['domain' => $request->domain]);
 
+        $notification = array([
+            'message' => 'Tenancy Register Successfully!',
+            'alert-type' => 'success'
+        ]);
 
-        return "done";
+
+        return redirect()->route('dashboard')->with($notification);
 
     }
 
