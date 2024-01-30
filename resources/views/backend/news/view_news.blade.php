@@ -49,9 +49,11 @@
                                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                                                    {{ $value->title }}
                                                 </td>
+
                                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                                    {{ $value->paragraph }}
+                                                   {{ $value->paragraph }}
                                                 </td>
+
                                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                                                     <div class="h-auto max-w-10 rounded-sm me-2"><img src="{{  (!empty($value->image))? url('upload/news/'.$value->image):url('upload/no_image.jpg') }}" alt="Image"></div>
                                                 </td>

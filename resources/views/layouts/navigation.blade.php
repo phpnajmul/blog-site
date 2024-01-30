@@ -17,11 +17,15 @@
                     </x-nav-link>
                 </div>
 
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+
+                <div style=" display : {{ (Auth::user()->user_type == 0) ? 'none' : '' }} " class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('view.news')" :active="request()->routeIs('create.news')">
                         {{ __('News') }}
                     </x-nav-link>
                 </div>
+
+
+
             </div>
 
             <!-- Settings Dropdown -->

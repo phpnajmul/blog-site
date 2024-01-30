@@ -49,6 +49,6 @@
 
 <p>Then finished setup & Start Your Project</p>
 
-<p>Thanks for reading my installation project</p>
+<p>Thanks for reading my installation project</p>  
 
 
