@@ -21,12 +21,14 @@ class NewsController extends Controller
 
         $dataValidate = $request->validate([
             'title' => 'required|max:255|unique:news',
+            'description' => 'required|max:100',
             'paragraph' => 'required',
             'image' => 'required',
         ]);
 
         $data = new News();
         $data->title = $request->title;
+        $data->description = $request->description;
         $data->paragraph = $request->paragraph;
         $data->added_by = Auth::user()->id;
 
@@ -61,10 +63,12 @@ class NewsController extends Controller
 
         $dataValidate = $request->validate([
             'title' => 'required|max:255|unique:news,title,' . $data->id,
+            'description' => 'required|max:100',
             'paragraph' => 'required',
         ]);
 
         $data->title = $request->title;
+        $data->description = $request->description;
         $data->paragraph = $request->paragraph;
         $data->updated_by = Auth::user()->id;
 

@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('news', function (Blueprint $table) {
             $table->id();
             $table->string('title')->nullable();
+            $table->string('description')->nullable();
             $table->mediumText('paragraph')->nullable();
             $table->string('image')->nullable();
             $table->tinyInteger('status')->default(1)->comment('0 = Inactive, 1 = Active');
