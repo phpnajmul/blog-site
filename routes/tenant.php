@@ -30,7 +30,10 @@ Route::middleware([
 //        return 'This is your multi-tenant application. The id of the current tenant is ' . tenant('id');
 //    });
 //
+
+
     Route::get('/',[FrontendController::class,'viewBlog'])->name('/');
+    Route::get('/news/details/{id}',[FrontendController::class,'newsDetails'])->name('news.details');
 
 
     Route::get('/dashboard', function () {
